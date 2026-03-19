@@ -417,7 +417,10 @@ body.dark-theme {
 .home__social {
   height: max-content;
   position: absolute;
-  left: -3rem;
+  /* left: -3rem;  old */
+  left: 0rem;
+  transform: translateX(-130%);
+  /*  */
   top: 0;
   bottom: 0;
   margin: auto 0;
