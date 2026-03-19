@@ -431,6 +431,8 @@ body.dark-theme {
 .home__social-link {
   background-color: var(--black-color-light);
   color: var(--white-color);
+  width: 2.25rem;
+  height: 2.25rem;
   font-size: 1.25rem;
   padding: 6px;
   display: grid;
