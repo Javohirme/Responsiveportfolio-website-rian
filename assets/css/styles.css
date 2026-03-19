@@ -122,8 +122,9 @@ body.dark-theme {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
+ max-width: 1150px;
+  margin-inline: auto;
+  width: 100%;
 }
 
 .grid {
@@ -202,6 +203,7 @@ body.dark-theme {
   position: relative;
   height: var(--header-height);
   display: flex;
+
   justify-content: space-between;
   align-items: center;
 }

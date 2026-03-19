@@ -30,9 +30,9 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 const shadowHeader = () => {
   const header = document.getElementById("header");
   // when
-  this.scrollY >= 50
-    ? header.classList.add("shadow-header")
-    : header.classList.remove("shadow-header");
+  this.scrollY >= 50 ?
+    header.classList.add("shadow-header")
+  : header.classList.remove("shadow-header");
 };
 
 window.addEventListener("scroll", shadowHeader);
@@ -45,11 +45,11 @@ const sendEmail = (e) => {
   e.preventDefault();
   // serviceID - templateID - #form - publicKey
   emailjs
-    .sendForm(
-      "service_m5brsra",
-      "template_to3nonu",
+    .send(
+      "service_u3pqjp4",
+      "template_m3gok7g",
       "#contact-form",
-      "tgygAZvrcIMEsDetH"
+      "tgygAZvrcIMEsDetH",
     )
     .then(
       () => {
@@ -67,7 +67,7 @@ const sendEmail = (e) => {
       () => {
         // Show error message
         contactMessage.textContent = "Message not sent (service error) ❌";
-      }
+      },
     );
 };
 
@@ -77,9 +77,9 @@ contactForm.addEventListener("submit", sendEmail);
 const scrollUp = () => {
   const scrollUp = document.getElementById("scroll-up");
   // when the scrol
-  this.scrollY >= 350
-    ? scrollUp.classList.add("show-scroll")
-    : scrollUp.classList.remove("show-scroll");
+  this.scrollY >= 350 ?
+    scrollUp.classList.add("show-scroll")
+  : scrollUp.classList.remove("show-scroll");
 };
 window.addEventListener("scroll", scrollUp);
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
@@ -93,7 +93,7 @@ const scrollActive = () => {
       sectionTop = current.offsetTop - 58,
       sectionId = current.getAttribute("id"),
       sectionsClass = document.querySelector(
-        ".nav__menu a[href*=" + sectionId + "]"
+        ".nav__menu a[href*=" + sectionId + "]",
       );
 
     if (scrolDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
@@ -122,10 +122,10 @@ const getCurrentIcon = () =>
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme
+    darkTheme,
   );
   themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](
-    iconTheme
+    iconTheme,
   );
   // we save the theme and the current icon that the user chose
   localStorage.setItem("selected-theme", getCurrentTheme());
