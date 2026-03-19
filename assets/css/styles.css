@@ -400,7 +400,7 @@ body.dark-theme {
 
 .home__arrow {
   left: 40%;
-  bottom: -4remk;
+  bottom: -4rem;
 }
 
 .hoem__line {
@@ -415,17 +415,23 @@ body.dark-theme {
 }
 
 .home__social {
-  height: max-content;
+  /* height: max-content;
   position: absolute;
   left: -3rem;
-  /* left: 0rem;
-  transform: translateX(-130%); */
-  /*  */
   top: 0;
   bottom: 0;
   margin: auto 0;
   display: grid;
-  row-gap: 1rem;
+  row-gap: 1rem; */
+  /*  */
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-120%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .home__social-link {
