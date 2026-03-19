@@ -122,7 +122,7 @@ body.dark-theme {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
- max-width: 1150px;
+  max-width: 1150px;
   margin-inline: auto;
   width: 100%;
 }
@@ -203,7 +203,7 @@ body.dark-theme {
   position: relative;
   height: var(--header-height);
   display: flex;
-
+  padding-inline: 20px;
   justify-content: space-between;
   align-items: center;
 }
@@ -249,6 +249,19 @@ body.dark-theme {
   }
 }
 
+@media screen and (min-width: 1150px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: hsla(0, 0%, 0%, 0.75);
+    width: 100%;
+    padding-block: 1.8rem 5rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    transition: top 0.4s;
+  }
+}
 .nav__title,
 .nav__name,
 .nav__close {
@@ -513,7 +526,9 @@ body.dark-theme {
   border: 3px solid var(--black-color);
   color: var(--black-color);
   padding: 0.5rem;
-  transition: border 0.4s, color 0.4s;
+  transition:
+    border 0.4s,
+    color 0.4s;
 }
 
 .button__ghost i {
@@ -637,7 +652,9 @@ body.dark-theme {
   padding: 6rem 1rem 3rem;
   z-index: 5;
   position: relative;
-  transition: background-color 0.4s, border 4s;
+  transition:
+    background-color 0.4s,
+    border 4s;
 }
 
 .services__border {
@@ -766,6 +783,7 @@ body.dark-theme {
 }
 /*=============== CONTACT ===============*/
 .contact {
+  position: relative;
   padding-bottom: 0;
 }
 
@@ -856,7 +874,9 @@ body.dark-theme {
   color: var(--white-color);
   padding: 0.5rem 1rem;
   font-weight: var(--font-medium);
-  transition: border 0.4s, background-color 0.4s;
+  transition:
+    border 0.4s,
+    background-color 0.4s;
 }
 .contact__input::placeholder {
   color: var(--text-color-light);
@@ -868,7 +888,9 @@ body.dark-theme {
 }
 
 .contact__input:-webkit-autofill {
-  transition: background-color 6000s, color 6000s;
+  transition:
+    background-color 6000s,
+    color 6000s;
 }
 
 .contact__label {
@@ -881,7 +903,10 @@ body.dark-theme {
   background-color: var(--black-color);
   padding: 8px;
   pointer-events: none;
-  transition: top 0.4s, opacity 0.4s, backgrount-color 0.4s;
+  transition:
+    top 0.4s,
+    opacity 0.4s,
+    backgrount-color 0.4s;
   opacity: 0;
 }
 
@@ -1031,7 +1056,10 @@ body.dark-theme {
   font-size: 2rem;
   color: var(--white-color);
   z-index: var(--z-tooltip);
-  transition: bottom 0.4s, transform 0.4s, background-color 0.4s;
+  transition:
+    bottom 0.4s,
+    transform 0.4s,
+    background-color 0.4s;
 }
 
 .scrollup:hover {
