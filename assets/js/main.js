@@ -34,28 +34,24 @@ const sendEmail = (e) => {
   e.preventDefault();
 
   emailjs
-    .send(
-      "service_u3pqjp4",
-      "template_m3gok7g",
-      "#contact-form",
-      "tgygAZvrcIMEsDetH",
+    .sendForm(
+      "service_u3pqjp4", // service ID
+      "template_us9h8e7", // template ID
+      "#contact-form", // form ID
     )
     .then(
       () => {
-        if (contactMessage) {
-          contactMessage.textContent = "Message sent successfully ✅";
-        }
+        contactMessage.textContent = "Message sent successfully ✅";
 
         setTimeout(() => {
-          if (contactMessage) contactMessage.textContent = "";
+          contactMessage.textContent = "";
         }, 5000);
 
-        if (contactForm) contactForm.reset();
+        contactForm.reset();
       },
-      () => {
-        if (contactMessage) {
-          contactMessage.textContent = "Message not sent ❌";
-        }
+      (error) => {
+        contactMessage.textContent = "Message not sent ❌";
+        console.log(error);
       },
     );
 };
@@ -143,3 +139,21 @@ if (themeButton) {
     localStorage.setItem("selected-icon", getCurrentIcon());
   });
 }
+
+// Scroll reveal animation
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 1900,
+  delay: 100,
+  // reset: true,
+});
+
+sr.reveal(".home__perfil, .about__image, .contact__mail", { origin: "right" });
+sr.reveal(
+  ".home__name, .home__info, .about__container, section__title-1, .about__info, .contact__social, .contact__data",
+  {
+    origin: "left",
+  },
+);
+sr.reveal(".services__card, .projects__card", { interval: 100 });
